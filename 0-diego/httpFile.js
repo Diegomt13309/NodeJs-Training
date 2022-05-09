@@ -1,4 +1,3 @@
-const { fstat } = require('fs');
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
@@ -48,8 +47,6 @@ const server = http.createServer((req,res) => {
     
     }else if(pathname === '/api'){
         res.writeHead(200, {'Content-type': 'text/html'});
-
-        
         res.end(data);
         //read the date, parse the json and send it to the client
         //we need to read the file once and not every time someone request or access to this route
